@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "New Tab Page",
+  "short_name": "New Tab Page",
+  "version": "1.0.0",
+  "description": "Custom start page for new tabs",
+  "applications": {
+    "gecko": {
+      "id": "new-tab-page@dev.ext"
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "focus.html"
+  },
+  "permissions": ["storage"]
+}

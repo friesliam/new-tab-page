@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: clip;
+}
+
+body {
+    display: flex;
+    background: var(--bg-color);
+}
+
+
+#side-panel {
+    width: var(--side-panel-width);
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#clock {
+    position: absolute;
+    top: calc(25% - var(--clock-height));
+    width: auto;
+    height: var(--clock-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-size: var(--clock-font-size);
+    font-weight: bold;
+    color: var(--clock-font-color);
+}
+
+
+#search-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+#search-container {
+    width: var(--search-bar-width);
+    height: var(--search-bar-height);
+    margin-bottom: var(--height-between-search-and-icons);
+    background: var(--search-bar-color);
+    padding: 10px 40px;
+    border-radius: calc(0.5 * var(--search-bar-height));
+}
+
+#search-container > input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    font-family: var(--font-family);
+    font-size: var(--search-bar-font-size);
+    color: var(--search-bar-text-color);
+}
+
+
+#icons-container {
+    width: fit-content;
+    height: var(--icon-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: var(--icon-gap);
+    /* alignment fix */
+    transform: translateX(-12px);
+}
+
+#icons-container > a {
+    width: var(--icon-height);
+    height: var(--icon-height);
+    transition: 0.2s ease-in-out;
+}
+
+#icons-container > a > img {
+    width: auto;
+    height: 100%;
+}
+/* exception to gap, looks better */
+#icons-container > a > img[src="icons/amazon.svg"] {
+    margin-left: -22px;
+}
+#icons-container > a > img[src="icons/discord.svg"] {
+    margin-left: -12px;
+}
+
+#icons-container > a:hover {
+    margin-top: calc(-1.0 * var(--icon-hover-height));
+    filter: brightness(1.4);
+}
+
+
+#search-engine-selector {
+    position: absolute;
+    bottom: 0;
+    width: fit-content;
+    height: var(--search-engine-icons-height);
+    margin-bottom: var(--search-engine-selector-margin-bottom);
+    display: flex;
+    gap: var(--search-engine-icons-gap);
+}
+
+#search-engine-selector > img {
+    width: auto;
+    height: 100%;
+    transition: 0.1s ease-in-out;
+}
+#search-engine-selector > img:hover {
+    cursor: pointer;
+}
