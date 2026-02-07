@@ -11,7 +11,7 @@
     --height-between-search-and-icons: 52px;
 
     --icon-height: 98px;
-    --icon-gap: 34px;
+    --icon-gap: 28px;
     --icon-hover-height: 14px;
 
     --search-engine-icons-height: 44px;
@@ -19,7 +19,7 @@
     --search-engine-selector-margin-bottom: 16px;
     --search-engine-icon-hover-height: 8px;
 
-    --bg-color: rgba(28, 31, 33, 1.0);
+    --bg-color: rgba(22, 25, 27, 1.0);
     --search-bar-color: rgba(33, 39, 43, 1.0);
     --search-bar-text-color: rgba(121, 133, 140, 1.0);
     --clock-font-color: white;

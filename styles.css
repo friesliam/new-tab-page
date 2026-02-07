@@ -84,26 +84,20 @@ main {
     align-items: center;
     justify-content: space-evenly;
     gap: var(--icon-gap);
-    /* alignment fix */
-    transform: translateX(-12px);
 }
 
 #icons-container > a {
-    width: var(--icon-height);
+    width: fit-content;
     height: var(--icon-height);
     transition: 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #icons-container > a > img {
     width: auto;
     height: 100%;
-}
-/* exception to gap, looks better */
-#icons-container > a > img[src="icons/amazon.svg"] {
-    margin-left: -22px;
-}
-#icons-container > a > img[src="icons/discord.svg"] {
-    margin-left: -12px;
 }
 
 #icons-container > a:hover {

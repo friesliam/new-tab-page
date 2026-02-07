@@ -25,9 +25,27 @@ let searchEngine = localStorage.getItem("searchEngine") || "google";
 
 searchElement.addEventListener("keydown", (event) => {
     if (event.key !== "Enter") return;
-    const query = encodeURIComponent(searchElement.value);
 
-    location.href = searchEngines[searchEngine] + query;
+    const query = searchElement.value.trim();
+
+    if (/^(about:|chrome:\/\/|edge:\/\/|brave:\/\/)/i.test(query)) {
+        location.href = query;
+        return;
+    }
+
+    try {
+        let url = new URL(query);
+        location.href = url.href;
+        return;
+    } catch { }
+
+    try {
+        let url = new URL("https://" + query);
+        location.href = url.href;
+        return;
+    } catch { }
+
+    location.href = searchEngines[searchEngine] + encodeURIComponent(query);
 });
 
 
